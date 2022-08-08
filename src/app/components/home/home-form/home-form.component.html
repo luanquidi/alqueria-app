@@ -1,0 +1,50 @@
+<form 
+  nz-form 
+  [formGroup]="validateForm" 
+  class="login-form" 
+  (ngSubmit)="submitForm()"
+  (keyup.enter)="submitForm()"
+>
+  <nz-form-item>
+    <nz-form-control 
+      nzErrorTip="Producto"
+    >
+      <nz-input-group 
+        nzPrefixIcon="shopping"
+      >
+        <input 
+          type="text" 
+          nz-input 
+          formControlName="itemProduct" 
+          placeholder="Busque un producto, por nombre o id."
+          (keyup)="submitForm()"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <!-- <nz-form-item>
+    <nz-form-control 
+      nzErrorTip="Please input your Password!"
+    >
+      <nz-input-group 
+        nzPrefixIcon="lock"
+      >
+        <input 
+          type="password" 
+          nz-input 
+          formControlName="password" 
+          placeholder="Password" 
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item> -->
+  
+  <button 
+    nz-button 
+    class="login-form-button login-form-margin" 
+    [nzType]="'primary'"
+    [nzLoading]="isLoadingOne"
+  >
+    Buscar
+  </button>
+</form>

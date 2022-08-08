@@ -1,0 +1,20 @@
+.loadmore {
+    text-align: center;
+    margin-top: 12px;
+    height: 32px;
+    line-height: 32px;
+}
+
+nz-list {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+nz-list-item {
+    box-shadow: 0px 0px 5px #0000008a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
