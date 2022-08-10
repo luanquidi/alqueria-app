@@ -12,8 +12,10 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
 })
 export class HomeListComponent implements OnInit {
 
+  visibleModal: boolean;
+  item: Product = new Product();
+
   constructor(
-    private msg: NzMessageService,
     public productService: ProductService
   ) { }
 
@@ -21,9 +23,14 @@ export class HomeListComponent implements OnInit {
     
   }
 
+  handleModal(res: any) {
+    console.log(res);
+    this.visibleModal = true;
+    this.item = res.product;
 
-  edit(product: Product): void {
-    this.msg.success(product.title);
   }
+
+
+  
 
 }

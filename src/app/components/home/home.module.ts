@@ -10,13 +10,21 @@ import { HomeFormComponent } from './home-form/home-form.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule, NzListModule, NzSkeletonModule } from 'ng-zorro-antd';
 import { HomeListComponent } from './home-list/home-list.component';
+import { HomeItemComponent } from './home-item/home-item.component';
+import { NzModalModule } from 'ng-zorro-antd';
+import { ModalComponent } from 'src/app/shareds/modal/modal.component';
+import { NzCardModule } from 'ng-zorro-antd';
+import { NzAvatarModule } from 'ng-zorro-antd';
+import { NzInputNumberModule } from 'ng-zorro-antd';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HomeDashboardComponent,
     HomeFormComponent,
-    HomeListComponent
+    HomeListComponent,
+    HomeItemComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
@@ -27,8 +35,12 @@ import { HomeListComponent } from './home-list/home-list.component';
     ReactiveFormsModule,
     NzButtonModule,
     NzListModule,
-    NzSkeletonModule
-    // FormsModule
+    NzSkeletonModule,
+    NzModalModule,
+    NzCardModule,
+    NzAvatarModule,
+    NzInputNumberModule,
+    FormsModule
   ],
   exports: [
     HomeComponent,

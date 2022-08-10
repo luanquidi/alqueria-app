@@ -12,6 +12,9 @@ export class ProductService {
   listProduct: Array<Product> = [];
   dataProducts: Array<Product> = [];
   items: Observable<any[]>;
+  isVisibleModal = false;
+  productSelected = new Product();
+  listaProductosAgregados: Array<any> = [];
 
   constructor(
     private db: AngularFirestore

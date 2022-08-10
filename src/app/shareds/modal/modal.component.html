@@ -1,0 +1,38 @@
+<div nz-row>
+  <div nz-col [nzSpan]="12" [nzPush]="6">
+    <nz-modal 
+      [nzVisible]="productService.isVisibleModal" 
+      nzTitle="Agregar producto a listado" 
+      (nzOnCancel)="handleCancel()" 
+      (nzOnOk)="handleOk()"
+      [nzOkText]="'Agregar'"
+    >
+      <nz-card  
+        [nzCover]="coverTemplate" 
+        [nzActions]="[actionSetting, actionEdit, actionEllipsis]"
+        [nzSize]="'small'"
+      >
+        <nz-card-meta 
+          [nzTitle]="productService.productSelected.title" 
+          [nzDescription]="productService.productSelected.description" 
+          >
+        </nz-card-meta>
+      </nz-card>
+      <ng-template #coverTemplate>
+        <img alt="example" [src]="productService.productSelected.image" />
+      </ng-template>
+      <ng-template #actionSetting>
+      </ng-template>
+      <ng-template #actionEdit>
+          <nz-input-number 
+          [(ngModel)]="amount"
+          [nzMin]="1" 
+          [nzMax]="10" 
+          [nzStep]="1"
+        ></nz-input-number>
+      </ng-template>
+      <ng-template #actionEllipsis>
+      </ng-template>
+    </nz-modal>
+  </div>
+</div>
